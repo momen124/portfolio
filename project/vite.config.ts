@@ -1,10 +1,8 @@
-// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  // Replace with your actual repo name
-  base: '/portfolio/',
+  base: '/portfolio/',  // Important: matches your GitHub Pages subdirectory
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
