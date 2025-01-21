@@ -5,17 +5,20 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <Hero />
-      <About />
-      <Portfolio />
-      <Skills />
-      <Contact />
-    </div>
+    <DarkModeProvider>
+      <div className="min-h-screen transition-colors">
+        <Header />
+        <Hero />
+        <About />
+        <Portfolio />
+        <Skills />
+        <Contact />
+      </div>
+    </DarkModeProvider>
   );
 }
 

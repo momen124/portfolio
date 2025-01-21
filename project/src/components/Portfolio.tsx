@@ -1,6 +1,13 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
+/**
+ * Example changes:
+ *  - Card background changed to a gradient with new colors
+ *  - Rounded corners, a more pronounced shadow, and a hover scale effect
+ *  - Font changed to a custom class "font-poppins" (see notes below)
+ */
+
 const projects = [
   {
     title: 'E-Commerce Platform',
@@ -38,22 +45,36 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section
+      id="portfolio"
+      className="py-20 bg-white dark:bg-gray-800 transition-colors font-poppins"
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
           Portfolio
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div
+              key={index}
+              className="
+                rounded-xl shadow-xl overflow-hidden
+                bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700
+                hover:scale-[1.02] transform transition-transform
+              "
+            >
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
                     <span
@@ -69,13 +90,15 @@ const Portfolio = () => {
                     href={project.liveLink}
                     className="flex items-center text-blue-600 hover:text-blue-500"
                   >
-                    <ExternalLink size={20} className="mr-1" /> Live Demo
+                    <ExternalLink size={20} className="mr-1" />
+                    Live Demo
                   </a>
                   <a
                     href={project.githubLink}
-                    className="flex items-center text-gray-600 hover:text-gray-500"
+                    className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-100"
                   >
-                    <Github size={20} className="mr-1" /> Code
+                    <Github size={20} className="mr-1" />
+                    Code
                   </a>
                 </div>
               </div>

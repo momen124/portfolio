@@ -10,70 +10,85 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section
+      id="skills"
+      className="py-20 bg-white dark:bg-gray-900 font-poppins transition-colors"
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
           Skills & Expertise
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 bg-gray-50 rounded-lg">
+          {/* Frontend */}
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <Layout className="w-12 h-12 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Frontend</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+              Frontend
+            </h3>
             <ul className="space-y-2">
               {skills.frontend.map((skill, index) => (
                 <li
                   key={index}
-                  className="flex items-center text-gray-600"
+                  className="flex items-center text-gray-600 dark:text-gray-300"
                 >
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
                   {skill}
                 </li>
               ))}
             </ul>
           </div>
-          
-          <div className="p-6 bg-gray-50 rounded-lg">
+
+          {/* Backend */}
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <Code className="w-12 h-12 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Backend</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+              Backend
+            </h3>
             <ul className="space-y-2">
               {skills.backend.map((skill, index) => (
                 <li
                   key={index}
-                  className="flex items-center text-gray-600"
+                  className="flex items-center text-gray-600 dark:text-gray-300"
                 >
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
                   {skill}
                 </li>
               ))}
             </ul>
           </div>
-          
-          <div className="p-6 bg-gray-50 rounded-lg">
+
+          {/* Database */}
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <Database className="w-12 h-12 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Database</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+              Database
+            </h3>
             <ul className="space-y-2">
               {skills.database.map((skill, index) => (
                 <li
                   key={index}
-                  className="flex items-center text-gray-600"
+                  className="flex items-center text-gray-600 dark:text-gray-300"
                 >
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
                   {skill}
                 </li>
               ))}
             </ul>
           </div>
-          
-          <div className="p-6 bg-gray-50 rounded-lg">
+
+          {/* Tools */}
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <Terminal className="w-12 h-12 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Tools</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+              Tools
+            </h3>
             <ul className="space-y-2">
               {skills.tools.map((skill, index) => (
                 <li
                   key={index}
-                  className="flex items-center text-gray-600"
+                  className="flex items-center text-gray-600 dark:text-gray-300"
                 >
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-2" />
                   {skill}
                 </li>
               ))}
